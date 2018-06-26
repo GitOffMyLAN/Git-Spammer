@@ -1,3 +1,4 @@
+#!/bin/ruby
 # The repo that need to changed
 repo = ;
 # The amount of commits wanted
