@@ -13,3 +13,9 @@ amount="$1"
 username="$3"
 password="$4"
 repo="$2"
+cd $repo
+touch spamfile
+for ((i=1; i<=$amount; i++))
+do
+	echo "spam" >> spamfile
+done
