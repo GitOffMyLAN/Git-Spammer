@@ -10,12 +10,15 @@
 #done
 #"$0" -a "$amount ""$@"
 amount="$1"
-username="$3"
-password="$4"
 repo="$2"
 cd $repo
+git pull
 touch spamfile
+git config credential.helper store
 for ((i=1; i<=$amount; i++))
 do
 	echo "spam" >> spamfile
+	git add *
+	git commit -m "Spam"
+	git push
 done
